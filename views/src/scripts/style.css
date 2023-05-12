@@ -1,0 +1,57 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #261b49;
+}
+
+.navbar {
+    background-color: #261b49 !important;
+    border-color: black;
+}
+
+.reg-form,.login-form {
+    justify-content: center;
+    display: flex;
+    margin: 40px 50px;
+    padding: 30px;
+}
+
+.buttonrow {
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.querylist{
+    background-color: #a2abaf !important;
+    border-width: 10px !important;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    color:#261b49;
+}
+.plexiocontainer{
+    color: #261b49;
+    background-color: #a2abaf;
+    border-radius: 25px;
+}
+.bodycontainer{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.profilecontainer{
+    justify-content: center;
+    margin-top:5%;
+}
+.dropdown-menu{
+    background-color: #261b49;
+}
+.nav-link,.navbar-brand,.dropdown-item {
+    color:#a2abaf !important;
+}
