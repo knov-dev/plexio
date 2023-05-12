@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
     } else { ?>
         <div class='container row plexiocontainer profilecontainer'>
             <?php foreach($profiles as $r) { ?>
-                <div class='col' style="padding: 3%;">
+                <div class='col-2' style="padding: 3%;">
                     <a href='../controller/profile_selector.php?pfid="<?php echo $r[0];?>"'>
                         <div class='card bg-light'>
                             <img src='<?=$r[3]?>' class='card-img' >
