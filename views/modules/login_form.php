@@ -1,3 +1,7 @@
+<!--
+Module to display the login form
+-->
+
 <div class="login-form plexiocontainer">
     <form action="" method="post" novalidate>
         <div class="row">

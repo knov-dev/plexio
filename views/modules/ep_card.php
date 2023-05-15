@@ -1,3 +1,7 @@
+<!--
+Module to display the episode cards
+-->
+
 <div class='col-2 pb-5'>
     <a href='episode_view.php?id=<?= $row['id']; ?>'>
         <div class="card bg-light text-white">

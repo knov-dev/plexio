@@ -1,3 +1,8 @@
+<!--
+Module to display the new/edit user account form
+-->
+
+
 <div class="container plexiocontainer" style="padding-top: 1%;">
     <div class="row">
         <div class="col-6">

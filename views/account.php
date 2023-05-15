@@ -1,24 +1,20 @@
 <?php
+//Retrieve session, set the user id in a variable and connect to the database.
 session_start();
 $id = $_SESSION['userid'];
 require "../db/connections.php";
 include "modules/header.php";
 include "modules/navbar.php";
-
-
+//Select all the user info from the database by ID
 $user = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM users WHERE userid=".$id));
-
+//Display the account information table and the profile list
 include "modules/acc_form.php";
 include "modules/admin_panel_profiles.php";
 
-
-
-
 ?>
-
-
-
-
+<!--
+ Module to display the paypal subscription button.
+ -->
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
     <script>
@@ -76,5 +72,5 @@ include "modules/admin_panel_profiles.php";
     </script>
 
 <?php
-
+//Include the footer
 include "modules/footer.php";

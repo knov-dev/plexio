@@ -1,3 +1,6 @@
+<!--
+Module to display the navbar form
+-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/plexio/index.php">Plexio</a>

@@ -1,19 +1,21 @@
 <?php
+//Retrieve the session and connect to the database
 session_start();
 require "../db/connections.php";
 include "modules/header.php";
 include "modules/navbar.php";
-
+//If there is a post method, include the profile controller
 if (isset($_POST['pfname'])) {
     include "../controller/manage_profile.php";
 }
-
+//If there is an id parameter in the url, select the profile whose ID belongs to. Display the profile form.
 if (isset($_GET['id'])) {
     $profile = mysqli_query($con, "SELECT * FROM profiles WHERE profile_id = " . $_GET['id'])->fetch_assoc();
     include "modules/profile_form.php";
 } else if (isset($_GET['create']) && !isset($_POST['pfname'])) {
     include "modules/profile_form.php";
 } else {
+    //If there is no profiles, prompt the user with a "create profile" message and display the profile form
     $profiles = mysqli_fetch_all(mysqli_query($con, "SELECT * FROM profiles WHERE user_id = " . $_SESSION['userid']));
     if (!$profiles) {
         echo "<div class='container plexiocontainer'><h1>You don't have any profiles. Create a profile now.</h1></div>";

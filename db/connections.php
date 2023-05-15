@@ -1,7 +1,7 @@
 <?php
+//Set the timezone to UTC
 date_default_timezone_set('UTC');
 // Enter your Host, username, password, database below.
-// I left password empty because i do not set password on localhost.
 $con = mysqli_connect("localhost", "root", "usbw", "plexio");
 // Check connection
 if (mysqli_connect_errno()) {

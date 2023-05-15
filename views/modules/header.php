@@ -1,3 +1,8 @@
+<!--
+Module to display the header
+-->
+
+
 <!DOCTYPE html>
 <html>
 <head>

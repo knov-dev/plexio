@@ -1,3 +1,8 @@
+<!--
+Module to display the tv carousel unit
+-->
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <!--for i = 0

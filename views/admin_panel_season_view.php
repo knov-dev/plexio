@@ -1,10 +1,13 @@
 <?php
+//Retrieve the session and connect to the database
 session_start();
 require "../db/connections.php";
+//If there is a post method, include the season controller
 
 if ($_POST) {
     include "../controller/manage_season.php";
 }
+//If the url comes with an error parameter, display an error message on screen
 
 if (isset($_GET['error'])) {
     if ($_GET['error'] = '1') {
@@ -13,7 +16,8 @@ if (isset($_GET['error'])) {
 }
 include "modules/header.php";
 include "modules/navbar.php";
-
+//If there is an id in the URL, select the tv show by id from the database, and join it to its related seasons and episodes.
+//Otherwise display the episode form to be filled.
 if (isset($_GET['id'])) {
     $seasonQuery = "SELECT * FROM seasons WHERE id = " . $_GET['id'];
     $season = mysqli_fetch_assoc(mysqli_query($con, $seasonQuery));

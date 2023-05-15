@@ -1,6 +1,8 @@
 <?php
+//Retrieve session and connect to the database
 session_start();
 require "../db/connections.php";
+//Retrieve the values to be indexed in the database
 
 $ep_number = stripslashes($_POST['ep_num']);
 $ep_number = mysqli_real_escape_string($con, $ep_number);
@@ -23,6 +25,7 @@ $ep_url = stripslashes($_POST['ep_url']);
 $ep_url = mysqli_real_escape_string($con, $ep_url);
 
 $mysqltime = date('Y-m-d H:i:s');
+//Set up the query. If the ID parameter is empty, the item does not exist and needs to be created. Otherwise, it exists and needs to be updated
 
 if ($_POST['id'] == '') {
     $query = "INSERT into episodes (episode_number,name,description,duration,air_date,thumbnail,media_url,reg_date) 
@@ -34,8 +37,10 @@ VALUES ('$ep_number', '$ep_name','$ep_description','$ep_duration','$ep_date','$e
 }
 
 $result = mysqli_query($con, $query);
+//If the query fails, return a dump with the error code.
 
 if (!$result) {
     var_dump($con->error);
 }
+//Redirect to the admin panel
 header('Location: /plexio/views/admin_panel_season_view.php');

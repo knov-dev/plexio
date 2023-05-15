@@ -1,3 +1,7 @@
+<!--
+Module to display the reset password form
+-->
+
 <div class="login-form">
     <form action="" method="post">
         <div class="row">

@@ -1,3 +1,8 @@
+<!--
+Module to display the profiles form
+-->
+
+
 <div class="container plexiocontainer" style="padding-top: 1%;">
     <div class="row">
         <div class="col-8">

@@ -1,3 +1,4 @@
+
 <?php
 include "../db/connections.php";
 $movies = mysqli_query($con,"SELECT * FROM movies");

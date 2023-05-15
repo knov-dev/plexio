@@ -1,3 +1,7 @@
+<!--
+Module to display the episode form
+-->
+
 <div class="reg-form plexiocontainer">
     <form style="width: 50%;" action="" method="post">
         <div class="row">
