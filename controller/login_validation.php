@@ -1,4 +1,5 @@
 <?php
+//If the petition brings an email, check for the email in the database and also check that the password matches.
 if (isset($_POST['email'])) {
     $email = stripslashes($_POST['email']);
     $email = mysqli_real_escape_string($con, $email);
@@ -7,6 +8,8 @@ if (isset($_POST['email'])) {
     $query = "SELECT * FROM users WHERE email='$email' and password='" . md5($password) . "'";
     $result = mysqli_query($con, $query) or die(mysqli_error($con));
     $rows = mysqli_num_rows($result);
+    //If there is a valid result, set the user id, admin status and email on the session and redirect back to index.
+    //else, display an error module in the login page.
     if ($rows == 1) {
         $user = mysqli_fetch_assoc($result);
         $_SESSION['email'] = $user['email'];

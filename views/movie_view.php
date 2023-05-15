@@ -1,11 +1,16 @@
 <?php
+//Retrieves the session and connects to the database
 session_start();
 require "../db/connections.php";
 include "modules/header.php";
 include "modules/navbar.php";
+
+//Retrieve movies and the current user from the database
 $moviesQuery = "SELECT * FROM movies WHERE id=" . $_GET['id'];
 $movieResult = mysqli_fetch_assoc(mysqli_query($con, $moviesQuery));
 $user = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM users WHERE userid=" . $_SESSION['userid']));
+
+//Display the movie information. If the user is subscribed, diplay a "watch" button otherwise display a "subscribe" button
 echo "<div class='container plexiocontainer'>
 <div class='row'>
 <div class='col'><p>Name: " . $movieResult['name'] . "</p></div>

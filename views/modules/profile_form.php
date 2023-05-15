@@ -1,3 +1,8 @@
+<!--
+Module to display the profile form
+-->
+
+
 <div class="reg-form plexiocontainer" style="padding-top: 1%;">
     <form action="" method="post">
         <div class="row">

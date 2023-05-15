@@ -1,3 +1,7 @@
+<!--
+Module to display the registration form
+-->
+
 <div class="reg-form plexiocontainer">
     <form action="" method="post">
         <div class="row">
