@@ -1,7 +1,6 @@
 <?php
 //Retrieve the session and connect to the database
 session_start();
-
 $page_title = "Login";
 include "modules/header.php";
 include "modules/navbar.php";
