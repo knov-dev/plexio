@@ -4,7 +4,6 @@ Module to display the episode form
 <div class="reg-form plexiocontainer">
     <form style="width: 50%;" action="" method="post">
         <div class="row">
-            </div>
             <div class="col-3 form-group">
                 <label for="season_number">Season</label>
                 <p><?php if (isset($episode)) echo $episode['season_number'] ?></p>
