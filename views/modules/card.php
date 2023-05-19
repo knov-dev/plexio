@@ -1,8 +1,6 @@
 <!--
 Module to display the movies/tv shows cards
 -->
-
-
 <div class='col-2 pb-5'>
     <a href='<?= $type ?>_view.php?id=<?= $row['id']; ?>'>
         <div class="card bg-light text-white">

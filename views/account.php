@@ -12,17 +12,13 @@ include "modules/acc_form.php";
 include "modules/admin_panel_profiles.php";
 
 ?>
-<!--
- Module to display the paypal subscription button.
- -->
+<!--Module to display the paypal subscription button-->
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-
     <script>
         // Render the PayPal button
         paypal.Button.render({
             // Set your environment
             env: 'sandbox', // sandbox | production
-
             // Specify the style of the button
             style: {
                 layout: 'vertical', // horizontal | vertical
@@ -30,21 +26,17 @@ include "modules/admin_panel_profiles.php";
                 shape: 'rect', // pill | rect
                 color: 'gold' // gold | blue | silver | white | black
             },
-
             funding: {
                 allowed: [],
                 disallowed: [paypal.FUNDING.CARD, paypal.FUNDING.CREDIT ]
             },
-
             // Enable Pay Now checkout flow (optional)
             commit: true,
-
             // PayPal Client IDs - replace with your own
             client: {
                 sandbox: 'AeXPp4oR_gW7rzSQOUri6RLBqyGdmQ6aj8wNk3vJTKCnm--ltRD-2ybEw5U2V75UgeXygVismrZ5zcHo',
                 production: ''
             },
-
             payment: function (data, actions) {
                 return actions.payment.create({
                     payment: {
@@ -59,7 +51,6 @@ include "modules/admin_panel_profiles.php";
                     }
                 });
             },
-
             onAuthorize: function (data, actions) {
                 return actions.payment.execute()
                     .then(function () {
@@ -67,7 +58,6 @@ include "modules/admin_panel_profiles.php";
                         window.location.href ="/plexio/controller/manage_user.php?sub=1";
                     });
             }
-
         }, '#paypal-button-container');
     </script>
 

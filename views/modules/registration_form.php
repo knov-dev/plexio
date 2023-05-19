@@ -1,7 +1,6 @@
 <!--
 Module to display the registration form
 -->
-
 <div class="reg-form plexiocontainer">
     <form action="" method="post">
         <div class="row">
@@ -10,17 +9,20 @@ Module to display the registration form
                 <input id="email" type="email" class="form-control"
                        value="<?php if (isset($user)) echo $user['email'] ?>"
                        name="email" placeholder="Email" required>
-
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label for="password"><?php if (isset($user)){ echo 'New Password (Leave blank to keep existing)';}else{echo "Password";} ?></label>
+                    <label for="password">
+                        <?php if (isset($user)){ echo 'New Password (Leave blank to keep existing)';}
+                        else{echo "Password";} ?></label>
                     <input id="password" type="password" class="form-control"
                            name="password" placeholder="Password"
                         <?php if(!isset($user)) echo 'required' ?>>
                 </div>
                 <div class="col-md-6">
-                    <label for="password2"><?php if (isset($user)){ echo 'Confirm New Password';}else{echo "Re-Enter Password";} ?></label>
+                    <label for="password2">
+                        <?php if (isset($user)){ echo 'Confirm New Password';}
+                        else{echo "Re-Enter Password";} ?></label>
                     <input id="password2" type="password" class="form-control"
                            name="password2" placeholder="Re-Enter Password"
                         <?php if(!isset($user)) echo 'required' ?>>
@@ -44,7 +46,8 @@ Module to display the registration form
         <div class="row">
             <div class="col-md-12 form-group">
                 <label for="dob">Date Of Birth</label>
-                <input id="dob" type="date" class="date form-control" value="<?php if (isset($user)) echo $user['dob'] ?>" name="dob" required>
+                <input id="dob" type="date" class="date form-control"
+                       value="<?php if (isset($user)) echo $user['dob'] ?>" name="dob" required>
             </div>
         </div>
         <div class="row">

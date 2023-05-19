@@ -1,8 +1,6 @@
 <!--
 Module to display the category form
 -->
-
-
 <div class="reg-form plexiocontainer">
     <form style="width: 50%;" action="" method="post">
         <div class="row">

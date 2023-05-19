@@ -1,13 +1,9 @@
 <!--
 Module to display the episode form
 -->
-
 <div class="reg-form plexiocontainer">
     <form style="width: 50%;" action="" method="post">
         <div class="row">
-            <div class="col form-group">
-<!--                <label for="tv_name">Tv Show</label>-->
-<!--                <p>--><?php //if (isset($episode)) echo $episode['tv_show_name'] ?><!--</p>-->
             </div>
             <div class="col-3 form-group">
                 <label for="season_number">Season</label>

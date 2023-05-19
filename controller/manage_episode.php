@@ -6,21 +6,15 @@ require "../db/connections.php";
 
 $ep_number = stripslashes($_POST['ep_num']);
 $ep_number = mysqli_real_escape_string($con, $ep_number);
-
 $ep_name = stripslashes($_POST['ep_name']);
 $ep_name = mysqli_real_escape_string($con, $ep_name);
-
 $ep_date = $_POST['ep_date'];
-
 $ep_description = stripslashes($_POST['ep_description']);
 $ep_description = mysqli_real_escape_string($con, $ep_description);
-
 $ep_duration = stripslashes($_POST['ep_duration']);
 $ep_duration = mysqli_real_escape_string($con, $ep_duration);
-
 $ep_thumb = stripslashes($_POST['ep_thumb']);
 $ep_thumb = mysqli_real_escape_string($con, $ep_thumb);
-
 $ep_url = stripslashes($_POST['ep_url']);
 $ep_url = mysqli_real_escape_string($con, $ep_url);
 

@@ -7,7 +7,8 @@ if (mysqli_num_rows($categoryResult) > 0) {
         echo "<li> 
 <div class='row'>
     <div class='col-md-6'>" . $row["name"] . "</div>
-    <div class='col-md-3'><!--Button to delete category --> <a href='../controller/delete_category.php?id=" . $row["id"] . "'>Delete</a></div>
+    <div class='col-md-3'><!--Button to delete category --> 
+    <a href='../controller/delete_category.php?id=" . $row["id"] . "'>Delete</a></div>
 </div> </li>";
     }
     echo "</ul>";

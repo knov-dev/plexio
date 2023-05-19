@@ -17,7 +17,6 @@ if (isset($_POST['userid'])) {
 //If the email and cvv provided match with the database result, include the reset password form.
 //Otherwise display a "no credentials" message and display the forgot password form again.
 if (isset($_POST['email'])) {
-    //echo "<div class='container' style='justify-content:center;'><h5>An email has been sent to ".$_POST['email'].". Please follow the instructions to update it.</h5></div>";
     $email = $_POST['email'];
     $user = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM users WHERE email='" . $email . "'"));
     if ($_POST['email'] == $user['email'] && $_POST['cvv'] == $user['cvv']) {

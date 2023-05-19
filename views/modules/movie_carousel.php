@@ -1,4 +1,3 @@
-
 <?php
 include "../db/connections.php";
 $movies = mysqli_query($con,"SELECT * FROM movies");
@@ -12,7 +11,6 @@ $movieCount = 0;
 $tvshowCount = 0;
 $horrorCount = 0;
 ?>
-
 <div class="container plexiocontainer">
     <div class="row" style="text-align: center;">
         <div class="col">
@@ -34,7 +32,8 @@ $horrorCount = 0;
                 <div class="carousel-inner">
                     <?php while ($row = mysqli_fetch_array($movies, MYSQL_ASSOC)) {
                         echo "<div class='carousel-item ".$active."'><a href='movie_view.php?id=".$row['id']."'>
-                        <img class='d-block w-100' src='".$row['cover_img']."' alt='carmov".$movieCount."'></a></div>";$active="";$movieCount++;
+                        <img class='d-block w-100' src='".$row['cover_img']."' 
+                        alt='carmov".$movieCount."'></a></div>";$active="";$movieCount++;
                     } ?>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#movcar" data-bs-slide="prev">
@@ -53,7 +52,8 @@ $horrorCount = 0;
                     <?php $active = "active";?>
                     <?php while ($row = mysqli_fetch_array($tv_shows, MYSQL_ASSOC)) {
                         echo "<div class='carousel-item ".$active."'><a href='tv_show_view.php?id=".$row['id']."'>
-                        <img class='d-block w-100' src='".$row['cover_img']."' alt='tvshow".$tvshowCount."'></a></div>";$active="";$tvshowCount++;
+                        <img class='d-block w-100' src='".$row['cover_img']."' 
+                        alt='tvshow".$tvshowCount."'></a></div>";$active="";$tvshowCount++;
                     } ?>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#tvcar" data-bs-slide="prev">
@@ -75,7 +75,8 @@ $horrorCount = 0;
                 <div class="carousel-inner">
                     <?php while ($row = mysqli_fetch_array($movies, MYSQL_ASSOC)) {
                         echo "<div class='carousel-item ".$active."'><a href='movie_view.php?id=".$row['id']."'>
-                        <img class='d-block w-100' src='".$row['cover_img']."' alt='movie".$movieCount."'></a></div>";$active="";$movieCount++;
+                        <img class='d-block w-100' src='".$row['cover_img']."' 
+                        alt='movie".$movieCount."'></a></div>";$active="";$movieCount++;
                     } ?>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -94,7 +95,8 @@ $horrorCount = 0;
                     <?php $active = "active";?>
                     <?php while ($row = mysqli_fetch_array($horror, MYSQL_ASSOC)) {
                         echo "<div class='carousel-item ".$active."'><a href='movie_view.php?id=".$row['id']."'>
-                        <img class='d-block w-100' src='".$row['cover_img']."' alt='horror".$horrorCount."'></a></div>";$active="";$horrorCount++;
+                        <img class='d-block w-100' src='".$row['cover_img']."' 
+                        alt='horror".$horrorCount."'></a></div>";$active="";$horrorCount++;
                     } ?>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#horcar" data-bs-slide="prev">
@@ -109,4 +111,3 @@ $horrorCount = 0;
         </div>
     </div>
 </div>
-

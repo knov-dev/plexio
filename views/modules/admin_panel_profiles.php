@@ -1,15 +1,14 @@
 <!--
 Module to display the profiles form
 -->
-
-
 <div class="container plexiocontainer" style="padding-top: 1%;">
     <div class="row">
         <div class="col-8">
             <h3>Profiles</h3>
         </div>
         <div class="col-4" style="justify-content: end;display: flex;">
-            <a class="btn btn-primary" href='profile_manager.php?create=1'><i class="fa-solid fa-plus"></i> Add Profile</a>
+            <a class="btn btn-primary" href='profile_manager.php?create=1'>
+                <i class="fa-solid fa-plus"></i> Add Profile</a>
         </div>
     </div>
     <div class="row mt-3">

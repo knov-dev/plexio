@@ -19,7 +19,12 @@ echo "<div class='container plexiocontainer'>
 </div>
 <div class='row'>
     <div class='col'>
-        <iframe width='560' height='315' src='" . $movieResult['media_url'] . "' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+        <iframe width='560' height='315' 
+        src='" . $movieResult['media_url'] . "' 
+        title='YouTube video player' 
+        frameborder='0' 
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' 
+        allowfullscreen></iframe>
     </div>
     <div class='col'>
         <p>Sinopsis: " . $movieResult['description'] . "</p><div class='container' style='display: grid;justify-content: center;'>
@@ -28,11 +33,6 @@ echo "<div class='container plexiocontainer'>
 
 <?php } else { ?>
     <a class='btn btn-secondary' href='account.php'>Subscribe Now</a></div></div>
-
 <?php } ?>
-
-
-
-
 <?php
 include "modules/footer.php";?>

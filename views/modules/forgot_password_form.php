@@ -1,8 +1,6 @@
 <!--
 Module to display the forgot password form
 -->
-
-
 <div class="login-form plexiocontainer">
     <form action="" method="post">
         <div class="row">

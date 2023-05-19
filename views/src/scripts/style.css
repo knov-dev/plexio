@@ -2,34 +2,24 @@ html{
     height: 100%;
     width: 100%;
 }
-
-body {
-    background-color: #261b49;
-}
-
-.navbar {
+.navbar, body {
     background-color: #261b49 !important;
-    border-color: black;
 }
-
 .reg-form,.login-form {
     justify-content: center;
     display: flex;
     margin: 40px 50px;
     padding: 30px;
 }
-
 .buttonrow {
     justify-content: center;
     display: flex;
     margin-top: 10px;
 }
-
 .querylist{
     background-color: #a2abaf !important;
     border-width: 10px !important;
 }
-
 ul{
     list-style-type: none;
 }

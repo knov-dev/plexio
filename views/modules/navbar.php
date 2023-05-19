@@ -10,14 +10,19 @@ Module to display the navbar form
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <?php if (!isset($_SESSION['email'])) { ?>
+                <?php
+                //if there is no email declared in the session, the user hasn't logged in,
+                // therefore just display login and register options
+                if (!isset($_SESSION['email'])) { ?>
                     <li class="nav-item">
                         <a class="nav-link" href='/plexio/views/login.php'>Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href='/plexio/views/register.php'>Register</a>
                     </li>
-                <?php } else { ?>
+                <?php } else
+                //If there is an user, display different categories
+                { ?>
                     <li class="nav-item">
                         <a class="nav-link" href="/plexio/views/tvshows.php">TV Shows</a>
                     </li>
@@ -27,11 +32,16 @@ Module to display the navbar form
                     <li class="nav-item">
                         <a class="nav-link" href="/plexio/views/account.php">Account</a>
                     </li>
-                    <?php if ($_SESSION['is_admin'] == 1) { ?>
+                    <?php
+                    //If the user has is an admin, display an admin panel button
+
+                    if ($_SESSION['is_admin'] == 1) { ?>
                         <li class="nav-item">
                             <a class="nav-link" href="/plexio/views/admin_panel.php">Admin Panel</a>
                         </li>
                     <?php }
+                    //If the user has passed the profile selection screen, display the user name
+                    // tab with the option of changing the user or logging out
                     if(isset($_SESSION['profile_id'])){
                         echo "<li class='nav-item dropdown'>
                         <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button'

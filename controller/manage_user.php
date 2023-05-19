@@ -56,7 +56,8 @@ if (isset($_GET['sub'])) {
 //Set up the query. If the ID parameter is empty, the item does not exist and needs to be created.
 // Otherwise, it exists and needs to be updated
         if ($_POST['userid'] == '') {
-            $query = "INSERT into users (email,password,name,surname,dob,address,card_num,exp_date,cvv,reg_date) VALUES ('$email', '" . md5($password) . "','$name','$surname','$dob','$address','$card_num','$expd','$cvv','$mysqltime')";
+            $query = "INSERT into users (email,password,name,surname,dob,address,card_num,exp_date,cvv,reg_date) 
+VALUES ('$email', '" . md5($password) . "','$name','$surname','$dob','$address','$card_num','$expd','$cvv','$mysqltime')";
         } else {
             if ($_POST['password'] == '') {
                 $query = "UPDATE users SET email='" . $_POST['email'] . "',name='" . $_POST['name'] . "',

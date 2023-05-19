@@ -1,12 +1,10 @@
 <!--
 Module to display the season form
 -->
-
 <div class="reg-form plexiocontainer">
     <form style="width: 50%;" action="" method="post">
         <div class="row">
             <div class="col form-group">
-<!--               <p> --><?php //echo $season['episode_name']; ?><!--</p>-->
             </div>
             <div class="col-3 form-group">
                 <label for="season_number">Season Number</label>
@@ -24,7 +22,8 @@ Module to display the season form
             <div class="col form-group">
                 <label for="season_description">Description</label>
                 <textarea id="season_description" class="form-control"
-                          Placeholder="Write a brief summary here..." name="season_description" form="season_description"
+                          Placeholder="Write a brief summary here..." name="season_description"
+                          form="season_description"
                           required><?php if (isset($season)) echo $season['description'] ?></textarea>
             </div>
         </div>

@@ -19,7 +19,8 @@ $mysqltime = date('Y-m-d H:i:s');
 //Set up the query. If the ID parameter is empty, the item does not exist and needs to be created. Otherwise, it exists and needs to be updated
 
 if ($_POST['id'] == '') {
-    $query = "INSERT into seasons (season_number,air_date,description,cover_img,reg_date) VALUES ('$season_number', '" . ($season_date) . "','$season_description','$season_cover','$mysqltime')";
+    $query = "INSERT into seasons (season_number,air_date,description,cover_img,reg_date) 
+VALUES ('$season_number', '" . ($season_date) . "','$season_description','$season_cover','$mysqltime')";
 } else {
     $query = "UPDATE seasons SET season_number='" . $_POST['season_number'] . "',air_date='" . ($_POST['season_date']) . "'
     ,description='" . $_POST['season_description'] . "',cover_img='" . $_POST['season_cover'] . "' WHERE id='" . $_POST['id'] . "'";
